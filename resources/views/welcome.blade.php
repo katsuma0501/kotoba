@@ -66,6 +66,11 @@
     </head>
     <body>
         <div class="flex-center position-ref full-height">
+
+            <div class="top-right links">
+                <a href="{{ route('auth-twitter') }}">twitter login</a>
+            </div>
+
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
