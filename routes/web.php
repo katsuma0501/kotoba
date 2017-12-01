@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
+// Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
+// Route::get("auth/twitter/logout","Auth\AuthController@getLogout");
+
+// Route::get("home",array("as"=>"home","uses"=>function(){
+//     return view("home");
+// }));
+
+Route::get('auth/twitter', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/twitter/callback', 'Auth\AuthController@handleProviderCallback');
