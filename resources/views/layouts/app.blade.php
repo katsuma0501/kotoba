@@ -7,7 +7,7 @@
 
   <title>@yield('title') | {{ env('APP_NAME') }}</title>
 
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css/bootstrap.css') }}">
   <style type="text/css">
   body { padding-top: 80px; }
   .bd-footer{
@@ -117,7 +117,7 @@
 
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
+<script src="{{ asset('js/bootstrap.min.js') }}"></script>
 
 <script type="text/javascript">
   $('.bs-component [data-toggle="popover"]').popover();

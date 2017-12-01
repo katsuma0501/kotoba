@@ -21,7 +21,7 @@
             <button type="button" class="btn btn-primary">Twiiter</button>
             <hr>
             <p class="card-text">言葉遊びする</p>
-            <button type="button" class="btn btn-primary">今すぐ</button>
+            <button type="button" class="btn btn-primary">今すぐ投稿</button>
           </div>​​
         </aside>
       </div>

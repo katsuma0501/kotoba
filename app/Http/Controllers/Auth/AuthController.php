@@ -62,8 +62,6 @@ class AuthController extends Controller
             return $authUser;
         }
 
-        // var_dump($twitterUser);
-        // exit();
         return User::create([
             'name' => $twitterUser->name,
             'nickname' => $twitterUser->nickname,
