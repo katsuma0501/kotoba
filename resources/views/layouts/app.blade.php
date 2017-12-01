@@ -10,6 +10,21 @@
   <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
   <style type="text/css">
   body { padding-top: 80px; }
+  .bd-footer{
+    padding: 4rem 0;
+    margin-top: 4rem;
+    font-size: 85%;
+    text-align: center;
+    background-color: #f7f7f7;
+  }
+  .bd-footer a {
+    font-weight: 500;
+    color: #464a4c;
+  }
+  .bd-footer-links li {
+    display: inline-block;
+    list-style-type: none;
+  }
   @media ( min-width: 768px ) {
     #banner {
       min-height: 300px;
@@ -45,6 +60,9 @@
     .progress {
       margin-bottom: 10px;
     }
+    .bd-footer {
+      text-align: left;
+    }
   }
   </style>
 
@@ -57,32 +75,25 @@
 <body>
 
 <header>
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <a href="/" class="navbar-brand">Honoka</a>
-        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="navbar-collapse collapse" id="navbar-main">
-        <ul class="nav navbar-nav">
-          <li><a href="/">Top</a></li>
-          <li class="dropdown active">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Demo <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="./bootstrap-ja.html">Japanese Page</a></li>
-              <li><a href="./bootstrap.html">English Page</a></li>
-            </ul>
-          </li>
-          <li><a href="//github.com/windyakin/Honoka/releases">Download</a></li>
-          <li><a href="//github.com/windyakin/Honoka/wiki">Wiki</a></li>
-        </ul>
-      </div>
+<nav class="navbar navbar-light bg-faded navbar-fixed-top">
+  <div class="container">
+    <a href="/" class="navbar-brand">{{ env('APP_NAME') }}</a>
+    <button class="navbar-toggler hidden-sm-up float-xs-right" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation"></button>
+    <div class="clearfix hidden-sm-up"></div> <!-- fix navbar responsive bug -->
+    <div class="collapse navbar-toggleable-xs" id="navbar-header">
+      <ul class="nav navbar-nav">
+        <li class="nav-item">
+          <a href="/" class="nav-link">Top</a>
+        </li>
+        <li class="nav-item active">
+          <a href="./bootstrap.html" class="nav-link">Demo</a>
+        </li>
+        <li class="nav-item"><a href="//github.com/windyakin/Honoka/releases" class="nav-link">Download</a></li>
+<li class="nav-item"><a href="//github.com/windyakin/Honoka/wiki" class="nav-link">Wiki</a></li>
+      </ul>
     </div>
   </div>
+</nav>
 </header>
 
 <div class="container">
@@ -91,8 +102,21 @@
 
 </div>
 
+<footer class="bd-footer text-muted">
+  <div class="container">
+    <ul class="bd-footer-links pl-0">
+      <li class="mr-1"><a href="https://github.com/twbs/bootstrap">GitHub</a></li>
+      <li class="mr-1"><a href="https://twitter.com/getbootstrap">Twitter</a></li>
+      <li class="mr-1"><a href="/examples/">Examples</a></li>
+      <li class="mr-1"><a href="/about/history/">About</a></li>
+    </ul>
+    <p>Designed and built with all the love in the world by <a href="https://twitter.com/mdo" target="_blank">@mdo</a> and <a href="https://twitter.com/fat" target="_blank">@fat</a>. Maintained by the <a href="https://github.com/orgs/twbs/people">core team</a> with the help of <a href="https://github.com/twbs/bootstrap/graphs/contributors">our contributors</a>.</p>
+    <p>Currently v4.0.0-alpha.6. Code licensed <a rel="license" href="https://github.com/twbs/bootstrap/blob/master/LICENSE" target="_blank">MIT</a>, docs <a rel="license" href="https://creativecommons.org/licenses/by/3.0/" target="_blank">CC BY 3.0</a>.</p>
+  </div>
+</footer>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 
 <script type="text/javascript">
